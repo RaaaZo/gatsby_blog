@@ -1,0 +1,51 @@
+@import "vars";
+
+.follow_me {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $light-accents;
+
+  h2 {
+    font-size: 2.5rem;
+    margin: 5rem auto;
+    text-align: center;
+
+    a {
+      font-family: $heading-type, sans-serif;
+      font-weight: $bold;
+      color: $dark-accents;
+    }
+  }
+
+  &__images_wrapper {
+    display: flex;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      width: 50%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: 350px;
+
+    &__images_wrapper {
+      height: 250px;
+      img {
+        width: 35%;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 25%;
+    }
+  }
+}

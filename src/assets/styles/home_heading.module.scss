@@ -1,0 +1,48 @@
+@import "vars";
+
+.heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  margin-bottom: 10rem;
+
+  h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+    font-weight: $regular;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 5rem;
+    }
+    h3 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 6rem;
+    }
+    h3 {
+      font-size: 4rem;
+    }
+  }
+
+  @media (min-width: 1360px) {
+    h1 {
+      font-size: 8rem;
+      margin-bottom: 4rem;
+    }
+    h3 {
+      font-size: 4rem;
+    }
+  }
+}

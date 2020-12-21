@@ -1,0 +1,23 @@
+@import "vars";
+
+.footer {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $nav-background;
+
+  a {
+    color: $black;
+    font-family: $heading-type, sans-serif;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: $dark-accents;
+    }
+
+    span {
+      color: $dark-accents;
+    }
+  }
+}

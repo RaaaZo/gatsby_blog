@@ -1,0 +1,38 @@
+@import "vars";
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  max-height: 150px;
+  background-color: $nav-background;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 1.6rem;
+  }
+
+  &__list__item {
+    a {
+      color: $black;
+      font-weight: $bold;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__list {
+      justify-content: center;
+    }
+
+    &__list__item {
+      margin: 1rem;
+      padding: 2rem;
+    }
+  }
+}

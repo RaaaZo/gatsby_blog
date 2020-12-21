@@ -1,0 +1,62 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $page-background;
+  font-family: $main-type, sans-serif;
+  font-size: 2rem;
+  color: $black;
+  line-height: 2.5rem;
+  overflow-x: hidden;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $heading-type, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+    font-family: $main-type, sans-serif;
+  }
+
+  button {
+    border: 3px solid $dark-accents;
+    border-radius: 15px;
+    background-color: $page-background;
+    font-family: $main-type, sans-serif;
+    color: $black;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $dark-accents;
+}
+body::-webkit-scrollbar-track {
+  background: $page-background;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $dark-accents;
+  border-radius: 6px;
+  border: 3px solid $page-background;
+}
