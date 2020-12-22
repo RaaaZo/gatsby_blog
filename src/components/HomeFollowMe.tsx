@@ -1,6 +1,6 @@
 import React from "react"
 
-import styles from "../assets/styles/home_follow_me.module.scss"
+import styles from "../assets/styles/follow_me.module.scss"
 
 const HomeFollowMe = () => {
   return (

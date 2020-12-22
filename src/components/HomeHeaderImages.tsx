@@ -1,25 +1,22 @@
 import React from "react"
 import Img from "gatsby-image"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+// @ts-expect-error
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import styles from "../assets/styles/home_header_image.module.scss"
+import styles from "../assets/styles/header_image.module.scss"
+import { motion } from "framer-motion"
+import { FadeIn } from "../utils/animations/variants"
+import { GatsbyFluidImage } from "../utils/interfaces/interfaces"
 
-interface DataProps {
+interface GatsbyImage {
   allImageSharp: {
-    nodes: {
-      fluid: {
-        aspectRatio: number
-        base64: string
-        sizes: string
-        src: string
-        srcSet: string
-      }
-    }[]
+    nodes: GatsbyFluidImage[]
   }
 }
 
 const HomeHeaderImages = () => {
-  const { allImageSharp } = useStaticQuery<DataProps>(graphql`
+  const { allImageSharp } = useStaticQuery<GatsbyImage>(graphql`
     {
       allImageSharp(filter: { original: { src: { regex: "/home/" } } }) {
         nodes {
@@ -34,9 +31,17 @@ const HomeHeaderImages = () => {
   const { nodes } = allImageSharp
 
   return (
-    <div className={styles.main_images}>
-      <div className={styles.main_images__wrapper}>
-        <Link to="/travels">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      transition={{
+        staggerDirection: -1,
+        delayChildren: 0.5,
+      }}
+      className={styles.main_images}
+    >
+      <motion.div variants={FadeIn} className={styles.main_images__wrapper}>
+        <AniLink swipe to="/travels">
           <div className={styles.main_images__wrapper__text}>
             <h2>Travel</h2>
             <h4>With Me</h4>
@@ -45,11 +50,11 @@ const HomeHeaderImages = () => {
             style={{ width: "100%", height: "100%", position: "absolute" }}
             fluid={nodes[0].fluid}
           />
-        </Link>
-      </div>
+        </AniLink>
+      </motion.div>
 
-      <div className={styles.main_images__wrapper}>
-        <Link to="/photography">
+      <motion.div variants={FadeIn} className={styles.main_images__wrapper}>
+        <AniLink swipe to="/photography">
           <div className={styles.main_images__wrapper__text}>
             <h2>Photography</h2>
             <h4>With Me</h4>
@@ -58,9 +63,9 @@ const HomeHeaderImages = () => {
             style={{ width: "100%", height: "100%", position: "absolute" }}
             fluid={nodes[1].fluid}
           />
-        </Link>
-      </div>
-    </div>
+        </AniLink>
+      </motion.div>
+    </motion.div>
   )
 }
 

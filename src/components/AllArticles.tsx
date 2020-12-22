@@ -1,16 +1,13 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { Article, Articles } from "./HomeArticlesList"
 import SingleArticle from "./SingleArticle"
 
-import styles from "../assets/styles/article_list.module.scss"
-import { graphql, useStaticQuery } from "gatsby"
-import { Article, Articles } from "../utils/interfaces/interfaces"
-
-const HomeArticlesList: React.FC<{}> = () => {
+const AllArticles = () => {
   const { articles } = useStaticQuery<Articles>(graphql`
     {
       articles: allContentfulBlogPost(
         sort: { fields: publishedDate, order: DESC }
-        limit: 6
       ) {
         nodes {
           id
@@ -30,16 +27,12 @@ const HomeArticlesList: React.FC<{}> = () => {
   `)
 
   return (
-    <div className={styles.articles_list}>
-      <h2>Latest Articles</h2>
-
-      <div className={styles.articles_wrapper}>
-        {articles.nodes.map((article: Article) => (
-          <SingleArticle article={article} key={article.id} />
-        ))}
-      </div>
-    </div>
+    <>
+      {articles.nodes.map((article: Article) => (
+        <SingleArticle article={article} key={article.id} />
+      ))}
+    </>
   )
 }
 
-export default HomeArticlesList
+export default AllArticles

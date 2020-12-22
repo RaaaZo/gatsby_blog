@@ -1,0 +1,34 @@
+.article__wrapper {
+  $padding: 1rem;
+  max-width: 1360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  padding-left: $padding;
+  padding-right: $padding;
+  margin: 1rem auto 5rem auto;
+
+  p {
+    font-size: 1.8rem;
+    text-align: justify;
+    max-width: 1024px;
+  }
+
+  @media (min-width: 768px) {
+    $padding: 2rem;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
+.article__image_wrapper {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    height: 70vh;
+  }
+}

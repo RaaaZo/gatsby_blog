@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-
+// @ts-expect-error
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../assets/styles/nav.module.scss"
 
 const Nav = () => {
@@ -8,30 +8,30 @@ const Nav = () => {
     <nav className={styles.navbar}>
       <ul className={styles.navbar__list}>
         <li className={styles.navbar__list__item}>
-          <Link activeStyle={{ color: "#FF856B" }} to="/">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/">
             Home
-          </Link>
+          </AniLink>
         </li>
 
         <li className={styles.navbar__list__item}>
-          <Link activeStyle={{ color: "#FF856B" }} to="/author">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/author">
             Author
-          </Link>
+          </AniLink>
         </li>
         <li className={styles.navbar__list__item}>
-          <Link activeStyle={{ color: "#FF856B" }} to="/articles">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/articles">
             Articles
-          </Link>
+          </AniLink>
         </li>
         <li className={styles.navbar__list__item}>
-          <Link activeStyle={{ color: "#FF856B" }} to="/travels">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/travels">
             Travels
-          </Link>
+          </AniLink>
         </li>
         <li className={styles.navbar__list__item}>
-          <Link activeStyle={{ color: "#FF856B" }} to="/photography">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/photography">
             Photography
-          </Link>
+          </AniLink>
         </li>
       </ul>
     </nav>

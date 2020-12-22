@@ -1,0 +1,57 @@
+@import "vars";
+
+.all_articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+
+  h1 {
+    margin: 3rem;
+  }
+
+  &__types {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      width: 100%;
+      max-width: 200px;
+      border: 3px solid $dark-accents;
+      border-radius: 15px;
+      background-color: $page-background;
+      font-size: 2rem;
+      font-family: $heading-type, sans-serif;
+      text-align: center;
+      padding: 1rem 2rem;
+      margin: 2rem 3rem;
+    }
+  }
+
+  h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+
+  @media (min-width: 1360px) {
+    h1 {
+      font-size: 8rem;
+      margin-bottom: 4rem;
+    }
+  }
+}

@@ -1,13 +1,20 @@
 import React from "react"
 
-import styles from "../assets/styles/home_heading.module.scss"
+import { motion } from "framer-motion"
+import styles from "../assets/styles/heading.module.scss"
+import { scaleUp } from "../utils/animations/variants"
 
 const HomeHeading = () => {
   return (
-    <div className={styles.heading}>
-      <h1>Abigail Mongo</h1>
-      <h3>Blogger</h3>
-    </div>
+    <motion.div
+      initial="hidden"
+      animate="show"
+      transition={{ staggerChildren: 0.4 }}
+      className={styles.heading}
+    >
+      <motion.h1 variants={scaleUp}>Abigail Mongo</motion.h1>
+      <motion.h3 variants={scaleUp}>Blogger</motion.h3>
+    </motion.div>
   )
 }
 

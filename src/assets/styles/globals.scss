@@ -15,7 +15,7 @@ body {
   font-family: $main-type, sans-serif;
   font-size: 2rem;
   color: $black;
-  line-height: 2.5rem;
+  line-height: 1.5;
   overflow-x: hidden;
 
   h1,
@@ -25,6 +25,7 @@ body {
   h5,
   h6 {
     font-family: $heading-type, sans-serif;
+    text-align: center;
   }
 
   a {
