@@ -8,6 +8,8 @@
   background-color: $light-accents;
 
   a {
+    width: 100%;
+    text-align: center;
     color: $black;
     font-family: $heading-type, sans-serif;
     transition: color 0.3s ease-in;

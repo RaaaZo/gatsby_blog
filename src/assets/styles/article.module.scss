@@ -5,10 +5,15 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 3rem;
+  grid-gap: 3rem;
   padding-left: $padding;
   padding-right: $padding;
   margin: 1rem auto 5rem auto;
+
+  h1,
+  h3 {
+    margin: 1rem auto;
+  }
 
   p {
     font-size: 1.8rem;

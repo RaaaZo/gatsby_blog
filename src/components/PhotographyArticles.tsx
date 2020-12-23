@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Article, Articles } from "./HomeArticlesList"
 import SingleArticle from "./SingleArticle"
+import { Article, Articles } from "../utils/interfaces/interfaces"
 
 const PhotographyArticles = () => {
   const { articles } = useStaticQuery<Articles>(graphql`

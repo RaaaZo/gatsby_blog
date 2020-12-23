@@ -19,6 +19,7 @@
 
     a {
       width: 100%;
+      min-width: 150px;
       max-width: 200px;
       border: 3px solid $dark-accents;
       border-radius: 15px;
@@ -27,7 +28,7 @@
       font-family: $heading-type, sans-serif;
       text-align: center;
       padding: 1rem 2rem;
-      margin: 2rem 3rem;
+      margin: 2rem 1rem;
     }
   }
 
@@ -39,6 +40,12 @@
   @media (min-width: 768px) {
     h1 {
       font-size: 5rem;
+    }
+
+    &__types {
+      a {
+        margin: 2rem 3rem;
+      }
     }
   }
 
@@ -52,6 +59,12 @@
     h1 {
       font-size: 8rem;
       margin-bottom: 4rem;
+    }
+
+    &__types {
+      a {
+        margin: 2rem 5rem;
+      }
     }
   }
 }

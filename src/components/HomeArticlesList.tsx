@@ -10,7 +10,7 @@ const HomeArticlesList: React.FC<{}> = () => {
     {
       articles: allContentfulBlogPost(
         sort: { fields: publishedDate, order: DESC }
-        limit: 6
+        limit: 4
       ) {
         nodes {
           id
