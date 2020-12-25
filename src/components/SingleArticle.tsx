@@ -42,10 +42,6 @@ const SingleArticle: React.FC<Props> = ({
       <AniLink swipe to={`/articles/${slug}`}>
         <motion.button
           whileHover={{ scale: 1.1, rotate: ["0deg", "3deg", "-3deg", "0deg"] }}
-          whileTap={{
-            scale: [0.8, 0.9, 1],
-            skew: ["0deg", "15deg", "-15deg", "0deg"],
-          }}
           className={styles.single_article__button}
         >
           Read More

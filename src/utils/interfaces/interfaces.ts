@@ -31,3 +31,10 @@ export interface GatsbyFluidImage {
     srcSet: string
   }
 }
+
+export interface PaginationPageContext {
+  limit: number
+  skip: number
+  numPages: number
+  currentPage: number
+}

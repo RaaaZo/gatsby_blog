@@ -41,7 +41,7 @@ const HomeHeaderImages = () => {
       className={styles.main_images}
     >
       <motion.div variants={FadeIn} className={styles.main_images__wrapper}>
-        <AniLink swipe to="/travels">
+        <AniLink swipe to="/travels/1">
           <div className={styles.main_images__wrapper__text}>
             <h2>Travel</h2>
             <h4>With Me</h4>
@@ -54,7 +54,7 @@ const HomeHeaderImages = () => {
       </motion.div>
 
       <motion.div variants={FadeIn} className={styles.main_images__wrapper}>
-        <AniLink swipe to="/photography">
+        <AniLink swipe to="/photography/1">
           <div className={styles.main_images__wrapper__text}>
             <h2>Photography</h2>
             <h4>With Me</h4>

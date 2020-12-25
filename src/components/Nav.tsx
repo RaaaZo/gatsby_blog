@@ -19,17 +19,17 @@ const Nav = () => {
           </AniLink>
         </li>
         <li className={styles.navbar__list__item}>
-          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/articles">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/articles/1">
             Articles
           </AniLink>
         </li>
         <li className={styles.navbar__list__item}>
-          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/travels">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/travels/1">
             Travels
           </AniLink>
         </li>
         <li className={styles.navbar__list__item}>
-          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/photography">
+          <AniLink swipe activeStyle={{ color: "#FF856B" }} to="/photography/1">
             Photography
           </AniLink>
         </li>

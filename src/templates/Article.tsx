@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import styles from "../assets/styles/article.module.scss"
+import SEO from "../components/SEO"
 
 interface DataProps {
   article: {
@@ -27,16 +28,19 @@ const Article: React.FC<PageProps<DataProps>> = ({ data }) => {
   const { author, image, publishedDate, title, body } = data.article
 
   return (
-    <div className={styles.article__wrapper}>
-      <div className={styles.article__image_wrapper}>
-        <Img style={{ width: "100%", height: "100%" }} fluid={image.fluid} />
+    <>
+      <SEO />
+      <div className={styles.article__wrapper}>
+        <div className={styles.article__image_wrapper}>
+          <Img style={{ width: "100%", height: "100%" }} fluid={image.fluid} />
+        </div>
+        <h1>{title}</h1>
+        <h3>
+          by {author} on {publishedDate}
+        </h3>
+        {renderRichText(body)}
       </div>
-      <h1>{title}</h1>
-      <h3>
-        by {author} on {publishedDate}
-      </h3>
-      {renderRichText(body)}
-    </div>
+    </>
   )
 }
 

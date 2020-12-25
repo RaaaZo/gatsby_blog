@@ -1,0 +1,26 @@
+@import "vars";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    a {
+      font-family: $heading-type, sans-serif;
+      margin: 0rem 1rem;
+      padding: 2rem;
+      transition: color 0.4s ease;
+
+      &:hover {
+        color: $dark-accents;
+      }
+    }
+  }
+}
